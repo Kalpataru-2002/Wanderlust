@@ -90,9 +90,11 @@ app.use((req, res, next) => {
   next();
 });
 
+
+app.use("/", userRouter);
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
-app.use("/", userRouter);
+
 
 
 // Error Handling
